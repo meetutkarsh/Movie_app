@@ -84,7 +84,7 @@ def run():
             if select_movie == '--Select--':
                 st.warning('Please select Movie!!')
             else:
-                no_of_reco = st.slider('Number of movies you want Recommended:', min_value=1, max_value=10, step=1)
+                no_of_reco = st.slider('Number of movies you want Recommended:', min_value=5, max_value=20, step=1)
                 genres = data[movies.index(select_movie)]
                 test_points = genres
                 table = KNN_Movie_Recommender(test_points, no_of_reco+1)
