@@ -35,7 +35,7 @@ def get_movie_info(imdb_link):
     movie_story = 'Story: ' + str(movie_descr[2]).strip()+'.'
     rating = s_data.find("div", class_="AggregateRatingButton__TotalRatingAmount-sc-1ll29m0-3 jkCVKJ")
     rating = str(rating).split('<div class="AggregateRatingButton__TotalRatingAmount-sc-1ll29m0-3 jkCVKJ')
-    rating = str(rating[1]).split("</div>")
+    rating = str(rating[1]).split('</div>')
     rating = str(rating[0]).replace(''' "> ''', '').replace('">', '')
 
     movie_rating = 'Total Rating count: '+ rating
